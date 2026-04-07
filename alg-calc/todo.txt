@@ -1,0 +1,16 @@
+Gauss bei
+⎛-1.00   0.30   0.20 │ 0.00⎞
+⎜ 0.40  -1.00   0.80 │ 0.00⎟
+⎝ 0.60   0.70  -1.00 │ 0.00⎠
+ergibt keinen Kern sondern spezielle Lösung
+Und irgendwie keine richtige?
+
+Gauss: / 1 rausnehmen
+
+
+        ⎛1.00  1.00  1.00 │ 100.00⎞
+[A|b] = ⎝3.00  2.00  0.50 │ 100.00⎠
+
+
+
+Kern gibt nur positiv
