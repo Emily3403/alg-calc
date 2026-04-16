@@ -41,5 +41,5 @@ jobs:
     - name: Run the tests
       run: |
         pytest tests
-        mypy alg-calc tests
-        flake8 alg-calc tests
+        mypy alg_calc tests
+        flake8 alg_calc tests

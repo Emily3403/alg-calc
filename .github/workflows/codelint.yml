@@ -1,0 +1,45 @@
+name: Codelint
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  codelint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Install linters
+        run: pip install black isort ruff pyright mypy pylint
+
+      - name: Run isort+black
+        run: |
+          isort -c ./alg-calc
+          black --check ./alg-calc
+
+      - name: Run ruff
+        run: ruff check ./alg-calc
+
+      - name: Run pyright
+        run: pyright ./alg-calc
+
+      - name: Run mypy
+        run: mypy --check-untyped-defs ./alg-calc
+
+      - name: Run pylint
+        run: pylint ./alg-calc
+

@@ -164,7 +164,6 @@ class Farbe:
             self.en = "white"
             self.za = 7
 
-import time
 
 class Matrix:
     """
@@ -293,7 +292,6 @@ class Matrix:
                     return i
 
             return False
-
 
     def pos_KV(self):
         """
@@ -438,9 +436,11 @@ class Matrix:
 
         return out
 
+
 if __name__ == '__main__':
     A = Matrix([[0.36840362789339853], [0.5106520737259224]], b=[0.6774765732353941, 0.31861152315818386])
     A.find_non_0()
+
 
 class Ebene:
     """Class für eine Ebene."""
@@ -1203,7 +1203,8 @@ class Ebene:
                     mit_param_2 = sum(self.kv[i] * einsetzen.rv_2[i] for i in range(3))
                     diff = self.kv[3] - ohne_param
                     if schritt == 0:
-                        iter_list = [[std.format_prec(item, prec, mehrere=False) for item, prec in zip(einsetzen.sv, prec)], [std.format_prec(item, prec, mehrere=False, klammer=True) for item, prec in zip(einsetzen.rv_1, prec)], [std.format_prec(item, prec, mehrere=False, klammer=True) for item, prec in zip(einsetzen.rv_2, prec)]]
+                        iter_list = [[std.format_prec(item, prec, mehrere=False) for item, prec in zip(einsetzen.sv, prec)], [std.format_prec(item, prec, mehrere=False, klammer=True) for item, prec in zip(einsetzen.rv_1, prec)],
+                                     [std.format_prec(item, prec, mehrere=False, klammer=True) for item, prec in zip(einsetzen.rv_2, prec)]]
                         iter_list = ["" if i == 3 else f" ∙ ({iter_list[0][i]} + {einsetzen.param[0]} ∙ {iter_list[1][i]} + {einsetzen.param[1]} ∙ {iter_list[2][i]})" for i in range(4)]
 
                     elif schritt in [1, 2]:
@@ -1310,7 +1311,7 @@ class Ebene:
                 mitte = 0
                 if norm:
                     if eval_nchk:
-                        nchk = std.negcheck([item/koor[umst] for item in koor])
+                        nchk = std.negcheck([item / koor[umst] for item in koor])
                     E_darst = [std.format_prec(item / koor[umst] if isinstance(item, Number) else item, prec[i], string=True) for i, item in enumerate(koor)]
                     E_darst_abs = [std.format_prec(item / koor[umst] if isinstance(item, Number) else item, prec[i], absval=True, string=True) for i, item in enumerate(koor)]
 
@@ -1416,7 +1417,6 @@ class Ebene:
                 cprint(item, color)
 
         return out
-
 
 
 class Gerade:
