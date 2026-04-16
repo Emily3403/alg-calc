@@ -389,6 +389,7 @@ def _main_loop():
 
 def main() -> None:
     std.cls()
+    std.load_config()
     menu_far = std.get_color("men")
 
     y = True
