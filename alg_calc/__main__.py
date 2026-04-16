@@ -4,7 +4,7 @@ import random
 import time
 
 import alg_calc.stdlib as std
-import alg_calc.calc as stdop
+import alg_calc.alg as stdop
 import alg_calc.classes as cla
 from alg_calc.colored import cprint
 
