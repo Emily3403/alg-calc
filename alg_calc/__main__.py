@@ -22,7 +22,7 @@ def _main_loop():
     err = cla.Input()
 
     while err.error:
-        cprint("Willkommen bei dem Analytischen Geometrie-Rechner von Emily Seebeck.\n", men_far.en)
+        cprint("Willkommen bei dem Analytischen Geometrie-Rechner von Emily Aurelia Seebeck [411364] ✨💖.\n", men_far.en)
         cprint("Welche Funktionalität möchtest du benutzen?", men_far.en)
         cprint("Zur Auswahl steht:\n", men_far.en)
         cprint("0: Standardeinsetellungen ändern", men_far.en)
