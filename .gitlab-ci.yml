@@ -10,5 +10,5 @@ run_tests:
     - source venv/bin/activate
     - pip install -e ".[testing]"
     - pytest tests
-    - mypy src tests
-    - flake8 src tests
+    - mypy alg-calc tests
+    - flake8 alg-calc tests

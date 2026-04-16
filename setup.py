@@ -11,7 +11,7 @@ def open_readme_case_insensitively(directory='.') -> str | None:
 
     return None
 
-with open("src/alg-calc/version.py") as f:
+with open("./alg-calc/version.py") as f:
     __version__ = re.search('"(.+)"', f.read()).group(1)
 
 if __name__ == "__main__":
