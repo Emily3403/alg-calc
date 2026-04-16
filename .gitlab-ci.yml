@@ -1,7 +1,7 @@
 run_tests:
   image: python:latest
   before_script:
-    # ...
+  # ...
   script:
     - python3 -m ensurepip
     - pip -V

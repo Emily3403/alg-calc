@@ -3,13 +3,14 @@
 import random
 import time
 
-import alg_calc.stdlib as std
-import alg_calc.alg as stdop
 import alg_calc.classes as cla
+import alg_calc.alg as stdop
+import alg_calc.stdlib as std
 from alg_calc.colored import cprint
 
 
 def _main_loop():
+    _ = cla.Farbe
     config = std.load_config()
     prec_1 = config["Nachkommastellen 1"]
     prec_2 = config["Nachkommastellen 2"]

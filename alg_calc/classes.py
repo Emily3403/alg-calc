@@ -251,28 +251,24 @@ class Matrix:
         Number (Zeile) oder False
         """
 
-        if std.gauss_fast:
-            err_far = "red"
-            prec_int = 10
-        else:
-            err_far = std.get_color("err")
-            prec_int = std.get_prec("int")
-            all(std.verify_input(item, str(item), (bool, Number)) for item in [zeile, sarr_start, sarr_end])
-            std.verify_input(b, "b", bool)
-            if zeile is True:
-                raise InputError(colored(f"zeile ist True: {zeile}", err_far))
+        err_far = std.get_color("err")
+        prec_int = std.get_prec("int")
+        all(std.verify_input(item, str(item), (bool, Number)) for item in [zeile, sarr_start, sarr_end])
+        std.verify_input(b, "b", bool)
+        if zeile is True:
+            raise InputError(colored(f"zeile ist True: {zeile}", err_far))
 
-            if sarr_start is True:
-                raise InputError(colored(f"Subarray start ist True: {sarr_start}", err_far))
+        if sarr_start is True:
+            raise InputError(colored(f"Subarray start ist True: {sarr_start}", err_far))
 
-            if sarr_end is True:
-                raise InputError(colored(f"Subarray end ist True: {sarr_end}", err_far))
+        if sarr_end is True:
+            raise InputError(colored(f"Subarray end ist True: {sarr_end}", err_far))
 
-            if zeile and (sarr_start or sarr_end):
-                raise InputError(colored(f"zeile und subarray sind True: zeile: {zeile}, subarray start: {sarr_start}, subarray end: {sarr_end}", err_far))
+        if zeile and (sarr_start or sarr_end):
+            raise InputError(colored(f"zeile und subarray sind True: zeile: {zeile}, subarray start: {sarr_start}, subarray end: {sarr_end}", err_far))
 
-            if b is True and self.has_b is False:
-                raise InputError(colored(f"Die Matrix {self.A_buchst} hat kein b", err_far))
+        if b is True and self.has_b is False:
+            raise InputError(colored(f"Die Matrix {self.A_buchst} hat kein b", err_far))
 
         bis = self.dim_m
         if sarr_end is not False and sarr_end < self.dim_m:
