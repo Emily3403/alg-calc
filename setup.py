@@ -3,7 +3,7 @@ import os
 
 from setuptools import setup
 
-with open("alg-calc/version.py") as f:
+with open("alg_calc/version.py") as f:
     __version__ = re.search('"(.+)"', f.read()).group(1)
 
 if __name__ == "__main__":

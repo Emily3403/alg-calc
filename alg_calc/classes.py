@@ -1,11 +1,11 @@
 import copy
 from numbers import Number
 
-import AnalytischeGeometrie.Berechnungen as ber
-import AnalytischeGeometrie.Display as dis
-import AnalytischeGeometrie.StandardLib as std
-from AnalytischeGeometrie.Colored import colored
-from AnalytischeGeometrie.Colored import cprint
+import alg_calc.calc as ber
+import alg_calc.display as dis
+import alg_calc.stdlib as std
+from alg_calc.colored import colored
+from alg_calc.colored import cprint
 
 
 # Errors

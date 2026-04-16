@@ -28,18 +28,18 @@ jobs:
 
       - name: Run isort+black
         run: |
-          isort -c ./alg-calc
-          black --check ./alg-calc
+          isort -c ./alg_calc
+          black --check ./alg_calc
 
       - name: Run ruff
-        run: ruff check ./alg-calc
+        run: ruff check ./alg_calc
 
       - name: Run pyright
-        run: pyright ./alg-calc
+        run: pyright ./alg_calc
 
       - name: Run mypy
-        run: mypy --check-untyped-defs ./alg-calc
+        run: mypy --check-untyped-defs ./alg_calc
 
       - name: Run pylint
-        run: pylint ./alg-calc
+        run: pylint ./alg_calc
 

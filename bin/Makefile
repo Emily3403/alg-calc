@@ -1,12 +1,12 @@
 .PHONY: format lint
 
 lint:
-	ruff check ./alg-calc
-	pyright ./alg-calc
-	mypy --check-untyped-defs ./alg-calc
-	pylint ./alg-calc
+	ruff check ./alg_calc
+	pyright ./alg_calc
+	mypy --check-untyped-defs ./alg_calc
+	pylint ./alg_calc
 
 format:
-	isort ./alg-calc
-	black ./alg-calc
+	isort ./alg_calc
+	black ./alg_calc
 

@@ -2,9 +2,9 @@
 
 <p align="center">
 <a href=""><img alt="" src=""></a>
-<a href="https://badge.fury.io/py/alg-calc-async"><img alt="PyPI" src="https://badge.fury.io/py/alg-calc-async.svg"></a>
-<a href="https://github.com/bchmnn/alg-calc/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/bchmnn/alg-calc.svg"></a>
-<a href="https://github.com/bchmnn/alg-calc"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+<a href="https://badge.fury.io/py/alg_calc-async"><img alt="PyPI" src="https://badge.fury.io/py/alg_calc-async.svg"></a>
+<a href="https://github.com/bchmnn/alg_calc/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/bchmnn/alg_calc.svg"></a>
+<a href="https://github.com/bchmnn/alg_calc"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 </p>
 
 [Shisis](http://shisi.urbanup.com/16192641) is a small library to handle authentication for TU-Berlin's Moodle instance "ISIS" via Shibboleth.
@@ -12,7 +12,7 @@
 ## Install
 
 ```bash
-pip install alg-calc-async
+pip install alg_calc-async
 ```
 
 ## Usage
@@ -20,8 +20,8 @@ pip install alg-calc-async
 ### CLI
 
 ```bash
-$ alg-calc -h
-usage: alg-calc [-h] [-u USERNAME] [-p PASSWORD] [-t | -r]
+$ alg_calc -h
+usage: alg_calc [-h] [-u USERNAME] [-p PASSWORD] [-t | -r]
 
 options:
   -h, --help            show this help message and exit
@@ -39,13 +39,13 @@ options:
 import asyncio
 
 import aiohttp
-from alg-calc import Shisis
+from alg_calc import Shisis
 
 
 async def main():
     async with aiohttp.ClientSession() as session:
-        alg-calc = Shisis(session)
-        tokens = await alg-calc.authenticate("username", "password")
+        alg_calc = Shisis(session)
+        tokens = await alg_calc.authenticate("username", "password")
         print(tokens)
 
 
@@ -60,7 +60,7 @@ import os
 
 import aiohttp
 from poodle_async_full import ApiClient, Configuration, DefaultApi
-from alg-calc import Shisis
+from alg_calc import Shisis
 
 
 async def main():
@@ -71,8 +71,8 @@ async def main():
         config = await poodle.tool_mobile_get_public_config()
 
         async with aiohttp.ClientSession() as shisis_client:
-            alg-calc = Shisis(shisis_client)
-            tokens = await alg-calc.authenticate(
+            alg_calc = Shisis(shisis_client)
+            tokens = await alg_calc.authenticate(
                 "username",
                 "password",
                 config,
@@ -102,4 +102,4 @@ To contribute changes, open a PR on the `main` branch.
 
 ## Changelog
 
-See [CHANGELOG.md](https://github.com/bchmnn/alg-calc/blob/main/CHANGELOG.md)
+See [CHANGELOG.md](https://github.com/bchmnn/alg_calc/blob/main/CHANGELOG.md)

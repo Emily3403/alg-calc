@@ -19,7 +19,7 @@ def print_version() -> None:
 
     # This is a bit talkative, but I like giving info
     print(
-        f"This is alg-calc with version: {__version__}\n"
+        f"This is alg_calc with version: {__version__}\n"
         f"I am running on {os_string}\n"
         f"I am working in the directory \"{path()}\" to store data\n"
         f"I am using {database_string} as the database engine\n"
@@ -38,7 +38,7 @@ def path(*args: str | Path) -> Path:
 
 def parse_args() -> Namespace:
     """Parse the command line arguments"""
-    parser = ArgumentParser(prog="alg-calc", formatter_class=RawTextHelpFormatter, description="""TODO""")
+    parser = ArgumentParser(prog="alg_calc", formatter_class=RawTextHelpFormatter, description="""TODO""")
 
     # Arguments that you can always add
     parser.add_argument("-v", "--verbose", help="Make the application more verbose", action="count", default=0)  # TODO: Is default needed?
